@@ -1,0 +1,139 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#root {
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "article"
+    "section"
+    "main"
+    "footer"
+    ;
+    grid-template-columns: 1fr;
+}
+
+header {
+    background: #000;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: large;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    grid-area: header;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+header i {
+    padding: 5px;
+}
+
+.menu-right li {
+    padding: 10px;
+}
+
+.menu-right a {
+    text-decoration: none;
+}
+
+nav {
+    height: 720px;
+    background-image: url(/assets/img/bg-header.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+article {
+    display: grid;
+    grid-template-columns: repeat(2, 3fr);
+    padding: 3em;
+    background-color: #000;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+article div {
+    margin: 15px;
+    text-align: center;
+    align-self: center;
+}
+
+article div p {
+    padding: 1em;
+}
+
+article img {
+    width: 100%;
+}
+
+.caracteristicas {
+    background-color: #1E1A13;
+    padding: 3rem 2rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal; 
+    color: #fff;
+    text-align: center;
+}
+
+.caracteristicas h2 {
+    margin-bottom: 3rem;
+    letter-spacing: .1rem;
+}
+
+.caracteristicas .iconos {
+    display: flex;
+    justify-content: center;
+    gap: 90px;    
+
+}
+
+.iconos i {
+    font-size: 40px;
+    margin-bottom: 1rem;
+}
+
+main {
+    background-color: #000;
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    /* padding: 2em; */
+}
+
+main img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+footer {
+    background: #000;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: small;
+    grid-area: footer;
+    text-align: center;
+    height: 5em;
+}
+
+footer i {
+    margin: 8px;
+}
