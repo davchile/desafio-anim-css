@@ -25,9 +25,9 @@ header {
     font-style: normal;
     font-size: large;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    height: 60px;
+    height: 70px;
     grid-area: header;
 }
 
@@ -136,4 +136,49 @@ footer {
 
 footer i {
     margin: 8px;
+}
+
+@media (max-width: 576px) {
+    .menu-right {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 70px;
+        right: 0;
+        background: #000;
+        width: 70%;
+        max-width: 400px;
+        padding: 3rem;
+        height: calc(100vh - 70px);
+        transform: translateX(100%);
+        transition: transform 0.2s ease;
+    }
+    #toggler {
+        background: none;
+        border: none;
+        color: #fff;
+    }
+    .open .menu-right {
+        transform: translateX(0);
+    }
+    header {
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    #charact {
+        display: none;
+    }
+    #articulo {
+        display: flex;
+        flex-direction: column;
+    }
+    nav {
+        height: 480px;
+    }
+}
+
+@media (min-width: 576px) {
+    .fa-bars {
+        display: none;
+    }
 }
